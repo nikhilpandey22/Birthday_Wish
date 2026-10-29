@@ -1,0 +1,6 @@
+{
+  "name": "A White Rose for You",
+  "description": "A little world created just to celebrate Deepanshi's birthday with white roses, moonlight, and sincere wishes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

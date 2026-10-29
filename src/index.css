@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-script: 'Pinyon Script', cursive;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #050711;
+    color: #e2e8f0;
+    min-height: 100vh;
+    touch-action: manipulation;
+  }
+}
+
+.font-serif-elegant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-script-calligraphy {
+  font-family: 'Pinyon Script', cursive;
+}
+
+/* Delicate moonlight & glowing effects */
+@keyframes moonlightPulse {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes roseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.45)) drop-shadow(0 0 35px rgba(212, 175, 55, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.75)) drop-shadow(0 0 50px rgba(212, 175, 55, 0.4));
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+@keyframes butterflyFlutter {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(15px, -18px) rotate(6deg) scale(1.04);
+  }
+  50% {
+    transform: translate(-10px, -35px) rotate(-5deg) scale(0.96);
+  }
+  75% {
+    transform: translate(12px, -20px) rotate(4deg) scale(1.02);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+.animate-moonlight {
+  animation: moonlightPulse 6s ease-in-out infinite;
+}
+
+.animate-rose-glow {
+  animation: roseGlow 4s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+.animate-butterfly {
+  animation: butterflyFlutter 9s ease-in-out infinite;
+}
+
+/* Glassmorphism styling */
+.glass-panel {
+  background: rgba(13, 19, 36, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-panel-subtle {
+  background: rgba(18, 24, 46, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.ivory-letter {
+  background: radial-gradient(circle at 10% 10%, #fffdfa 0%, #fbf8f1 60%, #f4eee1 100%);
+  color: #1a1f2c;
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(212, 175, 55, 0.25);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050711;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
